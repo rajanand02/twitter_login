@@ -9,10 +9,10 @@
 </body>
 
 <template name="hello">
-  <div class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar navbar-inverse">
   </div>
   <div class="row">
-    <div class="span5 offset4">
+    <div class="span6 offset4">
       <div class="well">
         {{#if currentUser}}
         <h4>Thanks You have been connected.</h4>
@@ -20,19 +20,25 @@
         <h4>Sign in with Twitter to connect with  <a href="https://twitter.com/rajanand02">Raj Anand</a></h4>
         {{loginButtons}}
         {{/if}}
+      </div>
         <table class="table">
           {{#each users}}
           {{> user}}
           {{/each}}
         </table>
-      </div>
     </div>
   </div>
 </template>
 <template name = "user">
   <tr>
     <td>
-      <a target="_blank" href="http://twitter.com/{{userName}}"><img src="{{image}}"/> {{fullName}}</a>
+      <a target="_blank" href="http://twitter.com/{{services.twitter.screenName}}"><img src="{{services.twitter.profile_image_url}}"/> {{profile.name}}</a>
+
+      {{#constant}}
+      <iframe allowtransparency="true" frameborder="0" scrolling="no"
+        src="//platform.twitter.com/widgets/follow_button.html?screen_name={{services.twitter.screenName}}"
+        style="width:300px; height:20px;"></iframe>
+      {{/constant}}
     </td>
   </tr> 
 </template>
