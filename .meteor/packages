@@ -9,4 +9,5 @@ preserve-inputs
 accounts-ui
 accounts-twitter
 handlebars
-bootstrap
+less
+bootstrap-themes
