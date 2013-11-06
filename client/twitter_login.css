@@ -1,1 +1,22 @@
 /* CSS declarations go here */
+body {
+  background-color: #EAF1F1;
+}
+.navbar-inverse .navbar-inner{
+  background-color: #18bc9c !important;
+}
+
+.navbar-inverse .navbar-inner {
+  background-color: #18bc9c;
+  background-image: -moz-linear-gradient(top, #18bc9c, #18bc9c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#18bc9c), to(#18bc9c));
+  background-image: -webkit-linear-gradient(top, #18bc9c, #18bc9c);
+  background-image: -o-linear-gradient(top, #18bc9c, #18bc9c);
+  background-image: linear-gradient(to bottom, #18bc9c, #18bc9c);
+  background-repeat: repeat-x;
+  border-color: #18bc9c;
+}
+.navbar-inner {
+  min-height: 58px;
+}
+
